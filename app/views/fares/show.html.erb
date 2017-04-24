@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+
+<div class="row">
+        
+        <div class="col-md-10 jumbotron abc">
+          <h2 >Fare</h2>
+           <hr class="featurette-divider1">
+<p>
+  <strong>Starting range:</strong>
+  <%= @fare.Starting_Range %>
+</p>
+
+<p>
+  <strong>Ending range:</strong>
+  <%= @fare.Ending_Range %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @fare.Price %>
+</p>
+
+<%= link_to 'Edit', edit_fare_path(@fare) %> |
+<%= link_to 'Back', fares_path %>

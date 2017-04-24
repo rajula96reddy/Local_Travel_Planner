@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+
+<div class="row">
+        
+        <div class="col-md-10 jumbotron abc">
+          <h2 >Feedback</h2>
+           <hr class="featurette-divider1">
+<p>
+  <strong>Userid:</strong>
+  <%= @feedback.Userid %>
+</p>
+
+<p>
+  <strong>Feedback:</strong>
+  <%= @feedback.Feedback %>
+</p>
+
+<p>
+  <strong>Reply:</strong>
+  <%= @feedback.Reply %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+
+<div class="row">
+        
+        <div class="col-md-10 jumbotron abc">
+          <h2 >Service</h2>
+           <hr class="featurette-divider1">
+<p>
+  <strong>Type:</strong>
+  <%= @service.Type %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @service.Status %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

@@ -1,0 +1,64 @@
+ <p id="notice"><%= notice %></p>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-2">
+         
+            <h5>SEARCH:</h5>
+             <div style="width:50px">
+            <%= form_tag(drivers_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search keywords" %>
+            <!--<%= select_tag :search_column4, options_for_select(['Display all results','1','5','10','100']), {class:"btn btn-primary dropdown-toggle", type:"button", 'data-toggle':"dropdown"} %>-->
+            <%= submit_tag "Search", class:"btn btn-success" %>
+            <% end %>
+            </div>
+          <hr class="featurette-divider1">
+         
+          
+        </div>
+       
+        <div class="col-md-10 jumbotron abc">
+          <h2 >Driver Requests</h2>
+           <hr class="featurette-divider1">
+          <div class="table-responsive">
+            <table class="table ">
+              <thead>
+
+
+<!-- <h1>Drivers</h1> -->
+<!-- 
+<table>
+  <thead> -->
+    <tr>
+      <th>Name</th>
+      <th>E-mail</th>
+      <th>License number</th>
+      <th>Aadhaar number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drivers.each do |driver| %>
+      <tr>
+        <td><%= driver.name %></td>
+        <td><%= driver.E_mail %></td>
+        <td><%= driver.License_Number %></td>
+        <td><%= driver.Aadhaar_Number %></td>
+        <td><%= link_to "Approve Driver",:controller=>"drivers",:action=>"set_approved",:name=>driver.name%></td>
+        <td><%= link_to 'Show', driver %></td>
+        <td><%= link_to 'Edit', edit_driver_path(driver) %></td>
+        <td><%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+</div>
+</div>
+</div>
+
+<%= link_to 'New Driver', new_driver_path %>

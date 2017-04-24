@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+    <div class="container-fluid">
+
+      <div class="row">
+        
+        <div class="col-md-10 jumbotron abc">
+          <h2 >Fares</h2>
+           <hr class="featurette-divider1">
+          <div class="table-responsive">
+            <table class="table ">
+              <thead>
+<!-- <h1>Fares</h1>
+
+<table>
+  <thead> -->
+    <tr>
+      <th>Starting range</th>
+      <th>Ending range</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fares.each do |fare| %>
+      <tr>
+        <td><%= fare.Starting_Range %></td>
+        <td><%= fare.Ending_Range %></td>
+        <td><%= fare.Price %></td>
+        <td><%= link_to 'Show', fare %></td>
+        <td><%= link_to 'Edit', edit_fare_path(fare) %></td>
+        <!-- <td><%= link_to 'Destroy', fare, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fare', new_fare_path %>

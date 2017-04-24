@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+<div class="row">
+        
+        <div class="col-md-10 jumbotron abc">
+          <h2 >Fare</h2>
+           <hr class="featurette-divider1">
+<%= form_for(fare) do |f| %>
+  <% if fare.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fare.errors.count, "error") %> prohibited this fare from being saved:</h2>
+
+      <ul>
+      <% fare.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Starting_Range %>
+    <%= f.text_field :Starting_Range %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Ending_Range %>
+    <%= f.text_field :Ending_Range %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Price %>
+    <%= f.text_field :Price %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

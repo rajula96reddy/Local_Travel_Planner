@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+
+<div class="row">
+        
+        <div class="col-md-10 jumbotron abc">
+          <h2 >Driver</h2>
+           <hr class="featurette-divider1">
+<p>
+  <strong>E-mail:</strong>
+  <%= @driver.E_mail %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @driver.Password %>
+</p>
+
+<p>
+  <strong>License number:</strong>
+  <%= @driver.License_Number %>
+</p>
+
+<p>
+  <strong>Aadhaar number:</strong>
+  <%= @driver.Aadhaar_Number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @driver.name %>
+</p>
+
+<%= link_to 'Edit', edit_driver_path(@driver) %> |
+<%= link_to 'Back', drivers_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Starting_Range: MyString
+  Ending_Range: MyString
+  Price: MyString
+
+two:
+  Starting_Range: MyString
+  Ending_Range: MyString
+  Price: MyString
